@@ -14,7 +14,7 @@ class handler(BaseHTTPRequestHandler):
         req = json.loads(req.text)
         # stargazers
         if path[0] == 'star':
-          url += f'Stargazers-{req["stargazers_count"]}-D8BA00'
+          url += f'Stargazers-{req["stargazers_count"]}-B8B800'
         # watchers
         elif path[0] == 'watch':
           url += f'Watchers-{req["watchers_count"]}-00A4FF'
