@@ -5,7 +5,7 @@ import json
 class handler(BaseHTTPRequestHandler):
   def do_GET(self):
     url = 'https://img.shields.io/badge/'
-    path = self.path.split('/')
+    path = self.path[1:].split('/')
     try: 
       req = requests.get('https://creprox.vercel.app/https:/api.github.com/repos/' + '/'.join(path[1:]))
       req = json.loads(req.text)
