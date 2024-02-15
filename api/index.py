@@ -19,4 +19,3 @@ class handler(BaseHTTPRequestHandler):
     self.send_response(302)
     self.send_header('Location', url)
     self.end_headers()
-    self.wfile.write(req.encode('utf-8'))
