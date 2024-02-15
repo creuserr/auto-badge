@@ -9,7 +9,7 @@ class handler(BaseHTTPRequestHandler):
     try: 
       req = requests.get('https://creprox.vercel.app/https:/api.github.com/repos/' + '/'.join(path[1:]))
       req = json.loads(req.text)
-      if 'Not Found' in req.text:
+      if 'messags' in req:
         url += f'404-{'/'.join(path[1:])} not found-FF5353'
       elif path[0] == 'star':
         url += f'stargazers-{req["stargazers_count"]}-D8BA00'
@@ -23,7 +23,7 @@ class handler(BaseHTTPRequestHandler):
       if len(path) != 3:
         url += '400 Bad Request-FF5353'
       else:
-        url += f'500 Internal Error-FF2D2D'
+        url += '500 Internal Error-FF2D2D'
     self.send_response(302)
     self.send_header('Location', url)
     self.end_headers()
