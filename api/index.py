@@ -17,6 +17,6 @@ class handler(BaseHTTPRequestHandler):
     else:
       url += f'400 Bad Request-Invalid method-lightred'
     self.send_response(302)
-    self.send_header('Location', '')
+    self.send_header('Location', url)
     self.end_headers()
     self.wfile.write(req.encode('utf-8'))
