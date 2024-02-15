@@ -12,12 +12,18 @@ class handler(BaseHTTPRequestHandler):
         url += f'404-{"%2F".join(path[1:])} not found-FF5353'
       else:
         req = json.loads(req.text)
+        # stargazers
         if path[0] == 'star':
-          url += f'stargazers-{req["stargazers_count"]}-D8BA00'
+          url += f'Stargazers-{req["stargazers_count"]}-D8BA00'
+        # watchers
         elif path[0] == 'watch':
-          url += f'watchers-{req["watchers_count"]}-00A4FF'
+          url += f'Watchers-{req["watchers_count"]}-00A4FF'
+        # forks
+        elif path[0] == 'fork':
+          url += f'forks-{req["forks_count"]}-00A4FF'
+        # subscribers
         elif path[0] == 'sub':
-          url += f'subscribers-{req["subscribers_count"]}-DF6EFF'
+          url += f'Subscribers-{req["subscribers_count"]}-DF6EFF'
         else:
           url += '400 Bad Request-Invalid method-FF5353'
     except:
