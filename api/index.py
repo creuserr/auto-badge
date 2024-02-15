@@ -19,7 +19,7 @@ class handler(BaseHTTPRequestHandler):
         url += f'400 Bad Request-Invalid method-lightred'
     except:
       if len(path != 3):
-        url += f'400 Bad Request-Invalid re-lightred'
+        url += f'400 Bad Request-lightred'
       else:
         url += f'500 Internal Error-lightred'
     self.send_response(302)
