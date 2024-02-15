@@ -12,7 +12,7 @@ class handler(BaseHTTPRequestHandler):
         url += f'404-{"%2F".join(path[1:])} not found-FF5353'
       else:
         req = json.loads(req.text)
-        elif path[0] == 'star':
+        if path[0] == 'star':
           url += f'stargazers-{req["stargazers_count"]}-D8BA00'
         elif path[0] == 'watch':
           url += f'watchers-{req["watchers_count"]}-00A4FF'
