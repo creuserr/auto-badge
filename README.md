@@ -20,3 +20,5 @@ Statically generated Markdown badges for your GitHub repositories' README
 | `/sub` | Subscribers | [/sub/creuserr/auto-badge](https://auto-badge.vercel.app/sub/creuserr/auto-badge) |
 | `/fork` | Forks | [/fork/creuserr/auto-badge](https://auto-badge.vercel.app/fork/creuserr/auto-badge) |
 | `/issue` | Open Issues | [/issue/creuserr/auto-badge](https://auto-badge.vercel.app/issue/creuserr/auto-badge) |
+
+*This service heavily utilizes and accredits __shields.io.__*
