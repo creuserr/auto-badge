@@ -18,15 +18,15 @@ class handler(BaseHTTPRequestHandler):
         # watchers
         elif path[0] == 'watch':
           url += f'Watchers-{req["watchers_count"]}-00A4FF'
+        # subscribers
+        elif path[0] == 'sub':
+          url += f'Subscribers-{req["subscribers_count"]}-DF6EFF'
         # forks
         elif path[0] == 'fork':
           url += f'Forks-{req["forks_count"]}-979797'
         # open issues
         elif path[0] == 'issue':
           url += f'Open Issues-{req["forks_count"]}-008A3D'
-        # subscribers
-        elif path[0] == 'sub':
-          url += f'Subscribers-{req["subscribers_count"]}-DF6EFF'
         else:
           url += '400 Bad Request-Invalid method-FF5353'
     except:
