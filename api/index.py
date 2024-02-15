@@ -9,11 +9,13 @@ class handler(BaseHTTPRequestHandler):
     req = json.loads(req.text)
     url = 'https://img.shields.io/badge/'
     if path[0] == 'star':
-      url += f'stars-{req["stargazers_count"]}-yellow'
+      url += f'stargazers-{req["stargazers_count"]}-yellow'
     elif path[0] == 'watch':
-      url += f'wa-{req["watchers_count"]}-violet'
+      url += f'watchers-{req["watchers_count"]}-violet'
     elif path[0] == 'sub':
-      url += f'stars-{req["subscribers_count"]}-peach'
+      url += f'subscribers-{req["subscribers_count"]}-peach'
+    else:
+      url += f'400 Bad Request-Invalid method-lightred'
     self.send_response(302)
     self.send_header('Location', '')
     self.end_headers()
