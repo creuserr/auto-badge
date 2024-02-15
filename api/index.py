@@ -21,7 +21,7 @@ class handler(BaseHTTPRequestHandler):
         # forks
         elif path[0] == 'fork':
           url += f'Forks-{req["forks_count"]}-4131FF'
-        # issue
+        # open issues
         elif path[0] == 'issue':
           url += f'Open Issues-{req["forks_count"]}-008A3D'
         # subscribers
