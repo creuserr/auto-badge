@@ -10,9 +10,9 @@ class handler(BaseHTTPRequestHandler):
       req = requests.get('https://creprox.vercel.app/https:/api.github.com/repos/' + '/'.join(path[1:]))
       req = json.loads(req.text)
       if path[0] == 'star':
-        url += f'stargazers-{req["stargazers_count"]}-yellow'
+        url += f'stargazers-{req["stargazers_count"]}-FFC000'
       elif path[0] == 'watch':
-        url += f'watchers-{req["watchers_count"]}-#00A4FF'
+        url += f'watchers-{req["watchers_count"]}-00A4FF'
       elif path[0] == 'sub':
         url += f'subscribers-{req["subscribers_count"]}-DF6EFF'
       else:
