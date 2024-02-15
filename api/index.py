@@ -9,7 +9,7 @@ class handler(BaseHTTPRequestHandler):
     try: 
       req = requests.get('https://creprox.vercel.app/https:/api.github.com/repos/' + '/'.join(path[1:]))
       req = json.loads(req.text)
-      if 'messags' in req:
+      if 'message' in req:
         url += f'404-{'/'.join(path[1:])} not found-FF5353'
       elif path[0] == 'star':
         url += f'stargazers-{req["stargazers_count"]}-D8BA00'
