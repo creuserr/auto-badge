@@ -3,8 +3,6 @@ import requests
 import json
 
 class handler(BaseHTTPRequestHandler):
-  def format_count(self, i):
-    
   def do_GET(self):
     url = 'https://img.shields.io/badge/'
     path = self.path[1:].split('/')
@@ -39,3 +37,12 @@ class handler(BaseHTTPRequestHandler):
     self.send_response(302)
     self.send_header('Location', url)
     self.end_headers()
+    
+  def format_count(self, i):
+    s = ""
+    c = 0
+    for i in range(str(i)):
+      if i == 3:
+        
+      else:
+        
