@@ -42,6 +42,10 @@ class handler(BaseHTTPRequestHandler):
       else:
         url += '500 Internal Error-FF2D2D'
     self.send_response(302)
+    self.send_header('X-Autobadge-Version', version)
+    self.send_header('X-Autobadge-Method', path[0])
+    self.send_header('X-Autobadge-User', path[1])
+    self.send_header('X-Autobadge-Repo',)
     self.send_header('Location', url)
     self.end_headers()
     
