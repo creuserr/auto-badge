@@ -44,13 +44,13 @@ class handler(BaseHTTPRequestHandler):
     c = 0
     p = len(i)
     for x in range(len(i)):
-      x = p - x
+      px = p - x
       if c == 2:
         c = 0
-        s += i[x] + ','
+        s += i[px] + ','
       else:
         c += 1
-        s += i[x]
+        s += i[px]
     return s[:len(s) - 1] if s.endswith(',') else s
 
 print(handler.format_count(8273726269))
