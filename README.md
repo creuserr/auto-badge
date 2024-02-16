@@ -11,7 +11,7 @@ Statically generated Markdown badges for your GitHub repositories' README
 
 </div>
 
-# Usage
+## Usage
 
 ```html
 https://auto-badge.vercel.app/<METHOD>/<USER>/<REPO>
@@ -25,7 +25,22 @@ https://auto-badge.vercel.app/<METHOD>/<USER>/<REPO>
 | `/fork` | Forks | [/fork/creuserr/auto-badge](https://auto-badge.vercel.app/fork/creuserr/auto-badge) |
 | `/issue` | Open Issues | [/issue/creuserr/auto-badge](https://auto-badge.vercel.app/issue/creuserr/auto-badge) |
 
-# Deploy your own
+## Additional headers
+Auto-badge apply additional headers when redirecting to **img.shields.io**.
+
+```http
+GET https://auto-badge.vercel.app/star/creuserr/auto-badge
+```
+
+| Header | For | Example |
+|:------:|:---:|:-------:|
+| `X-Autobadge-Version` | Version of auto-badge | 3 |
+| `X-Autobadge-Method` | Requested method | star |
+| `X-Autobadge-User` | Provided username | creuserr |
+| `X-Autobadge-Repo` | Provided repository | auto-badge |
+| `X-Autobadge-Value` | Value of the request | 1 (detected 1 stargazer) |
+
+## Deploy your own
 Auto-badge's main serverless function strictly don't accept heavy queue due to GitHub free API's limitation.
 
 You are free to deploy your own, personalize by your style, and use your own API account. Simply fork this repository and adjust it all you want then deploy it to Vercel.
