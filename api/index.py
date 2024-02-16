@@ -39,6 +39,9 @@ class handler(BaseHTTPRequestHandler):
     self.end_headers()
     
   def format_count(i):
+    elif i >= 
+    elif i >= 1000:
+      return str(i)[0:len(i) - 3]
     i = str(i)
     s = ""
     c = 0
