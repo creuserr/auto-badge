@@ -25,4 +25,17 @@ https://auto-badge.vercel.app/<METHOD>/<USER>/<REPO>
 | `/fork` | Forks | [/fork/creuserr/auto-badge](https://auto-badge.vercel.app/fork/creuserr/auto-badge) |
 | `/issue` | Open Issues | [/issue/creuserr/auto-badge](https://auto-badge.vercel.app/issue/creuserr/auto-badge) |
 
+# Deploy your own
+Auto-badge's main serverless function strictly don't accept heavy queue due to GitHub free API's limitation.
+
+You are free to deploy your own, personalize by your style, and use your own API account. Simply fork this repository and adjust it all you want then deploy it to Vercel.
+
+<div align="center">
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fcreuserr%2Fauto-badge%2Ftree%2Fmain)
+
+</div><br>
+
+### Third-party libraries
+
 *This service heavily utilizes and accredits __shields.io.__*
