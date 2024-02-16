@@ -43,12 +43,12 @@ class handler(BaseHTTPRequestHandler):
     s = ""
     c = 0
     for x in range(len(i)):
-      if c == 3:
+      if c == 2:
         c = 0
-        s = f'{i[x]}{s},'
+        s += i[x] + ','
       else:
         c += 1
-        s = f'{i[x]}{s}'
+        s += i[x]
     return s
 
 print(handler.format_count(8273))
