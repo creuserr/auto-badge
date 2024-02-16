@@ -28,10 +28,12 @@ class handler(BaseHTTPRequestHandler):
           url += f'Subscribers-{self.fmtcount(count)}-DF6EFF'
         # forks
         elif path[0] == 'fork':
-          url += f'Forks-{self.fmtcount(req["forks_count"])}-979797'
+          count = req['forks_count']
+          url += f'Forks-{self.fmtcount(count)}-979797'
         # open issues
         elif path[0] == 'issue':
-          url += f'Open Issues-{self.fmtcount(req["forks_count"])}-008A3D'
+          count = req['open_issues_count']
+          url += f'Open Issues-{self.fmtcount(count)}-008A3D'
         else:
           url += '400 Bad Request-Invalid method-FF5353'
     except:
