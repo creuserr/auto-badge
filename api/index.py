@@ -3,6 +3,8 @@ import requests
 import json
 
 class handler(BaseHTTPRequestHandler):
+  def format_count(self, i):
+    
   def do_GET(self):
     url = 'https://img.shields.io/badge/'
     path = self.path[1:].split('/')
