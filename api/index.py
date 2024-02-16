@@ -56,7 +56,7 @@ class handler(BaseHTTPRequestHandler):
 print(handler.format_count(827372))
 
 
-277_277_232 - 277,277k
+277_277_232 - 277m
 1_262 - 1k
 82 - 82
-123_456_789_123 - 123m
+123_456_789_123 - 123b
