@@ -4,6 +4,8 @@ import json
 
 class handler(BaseHTTPRequestHandler):
   def do_GET(self):
+    version = 3
+    count = None
     url = 'https://img.shields.io/badge/'
     path = self.path[1:].split('/')
     try: 
@@ -14,13 +16,16 @@ class handler(BaseHTTPRequestHandler):
         req = json.loads(req.text)
         # stargazers
         if path[0] == 'star':
-          url += f'Stargazers-{self.fmtcount(req["stargazers_count"])}-B8B800'
+          count = req['stargazers_count']
+          url += f'Stargazers-{self.fmtcount(count)}-B8B800'
         # watchers
         elif path[0] == 'watch':
-          url += f'Watchers-{self.fmtcount(req["watchers_count"])}-00A4FF'
+          count = req['watchers_count']
+          url += f'Watchers-{self.fmtcount(count)}-00A4FF'
         # subscribers
         elif path[0] == 'sub':
-          url += f'Subscribers-{self.fmtcount(req["subscribers_count"])}-DF6EFF'
+          count = req['subscribers_count']
+          url += f'Subscribers-{self.fmtcount(count)}-DF6EFF'
         # forks
         elif path[0] == 'fork':
           url += f'Forks-{self.fmtcount(req["forks_count"])}-979797'
