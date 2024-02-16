@@ -49,6 +49,6 @@ class handler(BaseHTTPRequestHandler):
       else:
         c += 1
         s += i[x]
-    return s
+    return s[:1] if s.endswi
 
-print(handler.format_count(8273))
+print(handler.format_count(8273726269))
