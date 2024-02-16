@@ -14,19 +14,19 @@ class handler(BaseHTTPRequestHandler):
         req = json.loads(req.text)
         # stargazers
         if path[0] == 'star':
-          url += f'Stargazers-{self.count(req["stargazers_count"])}-B8B800'
+          url += f'Stargazers-{self.fmtcount(req["stargazers_count"])}-B8B800'
         # watchers
         elif path[0] == 'watch':
-          url += f'Watchers-{self.count(req["watchers_count"])}-00A4FF'
+          url += f'Watchers-{self.fmtcount(req["watchers_count"])}-00A4FF'
         # subscribers
         elif path[0] == 'sub':
-          url += f'Subscribers-{self.count(req["subscribers_count"])}-DF6EFF'
+          url += f'Subscribers-{self.fmtcount(req["subscribers_count"])}-DF6EFF'
         # forks
         elif path[0] == 'fork':
-          url += f'Forks-{self.count(req["forks_count"])}-979797'
+          url += f'Forks-{self.fmtcount(req["forks_count"])}-979797'
         # open issues
         elif path[0] == 'issue':
-          url += f'Open Issues-{self.count(req["forks_count"])}-008A3D'
+          url += f'Open Issues-{self.fmtcount(req["forks_count"])}-008A3D'
         else:
           url += '400 Bad Request-Invalid method-FF5353'
     except:
@@ -38,7 +38,7 @@ class handler(BaseHTTPRequestHandler):
     self.send_header('Location', url)
     self.end_headers()
     
-  def count(self, i):
+  def fmtcount(self, i):
     i = str(i)
     if int(i) >= 1000000000:
       i = i[0:len(i) - 9]
