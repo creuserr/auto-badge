@@ -1,5 +1,5 @@
 from http.server import BaseHTTPRequestHandler
-import requests
+#import requests
 import json
 
 class handler(BaseHTTPRequestHandler):
@@ -38,13 +38,16 @@ class handler(BaseHTTPRequestHandler):
     self.send_header('Location', url)
     self.end_headers()
     
-  def format_count(self, i):
+  def format_count(i):
     s = ""
     c = 0
     for i in range(str(i)):
       if c == 3:
         c = 0
-        s = str(i)[i] + s
+        s = str(i)[i] + s + ","
       else:
         c += 1
-        s = str(i)[i]
+        s = str(i)[i] + s
+    return s
+
+print(handler.format_count(8273))
