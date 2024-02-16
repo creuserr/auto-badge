@@ -1,5 +1,5 @@
 from http.server import BaseHTTPRequestHandler
-#import requests
+import requests
 import json
 
 class handler(BaseHTTPRequestHandler):
