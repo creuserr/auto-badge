@@ -59,4 +59,4 @@ class handler(BaseHTTPRequestHandler):
     elif int(i) >= 1000:
       return i[0:len(i) - 3] + 'k'
 
-print(handler.format_count(12273721276))
+print(handler.format_count(12273721276772))
