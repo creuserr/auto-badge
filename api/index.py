@@ -54,3 +54,8 @@ class handler(BaseHTTPRequestHandler):
     return s[:len(s) - 1] if s.endswith(',') else s
 
 print(handler.format_count(827372))
+
+
+277_277_232 - 277,277k
+1_262 - 1k
+82
