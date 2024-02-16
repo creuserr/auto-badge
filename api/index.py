@@ -39,27 +39,24 @@ class handler(BaseHTTPRequestHandler):
     self.end_headers()
     
   def format_count(i):
-    elif i >= 
+    if i >= 1000000000:
+      i = str(i)
+      s = ""
+      c = 0
+      p = len(i) - 1
+      for x in range(len(i)):
+        px = p - x
+        if c == 3:
+          c = 1
+          s = i[px] + ',' + s
+        else:
+          c += 1
+          s = i[px] + s
+      return (s[:len(s) - 1] if s.endswith(',') else s) + 'b'
+    elif i >= 1000000:
+      return str(i)[0:len(i) - 6] + 'm'
     elif i >= 1000:
-      return str(i)[0:len(i) - 3]
-    i = str(i)
-    s = ""
-    c = 0
-    p = len(i) - 1
-    for x in range(len(i)):
-      px = p - x
-      if c == 3:
-        c = 1
-        s = i[px] + ',' + s
-      else:
-        c += 1
-        s = i[px] + s
-    return s[:len(s) - 1] if s.endswith(',') else s
+      return str(i)[0:len(i) - 3] + 'k'
 
 print(handler.format_count(827372))
 
-
-277_277_232 - 277m
-1_262 - 1k
-82 - 82
-123_456_789_123 - 123b
