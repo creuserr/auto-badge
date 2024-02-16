@@ -42,6 +42,7 @@ class handler(BaseHTTPRequestHandler):
     i = str(i)
     s = ""
     c = 0
+    p = len(i)
     for x in range(len(i)):
       if c == 2:
         c = 0
@@ -49,6 +50,6 @@ class handler(BaseHTTPRequestHandler):
       else:
         c += 1
         s += i[x]
-    return s[:1] if s.endswi
+    return s[:len(s) - 1] if s.endswith(',') else s
 
 print(handler.format_count(8273726269))
