@@ -13,6 +13,10 @@ Statically generated Markdown badges for your GitHub repositories' README
 
 # Usage
 
+```html
+https://auto-badge.vercel.app/<METHOD>/<USER>/<REPO>
+```
+
 | Method | For | Example URL |
 |:-----:|:-----:|:-----:|
 | `/star` | Stargazers | [/star/creuserr/auto-badge](https://auto-badge.vercel.app/star/creuserr/auto-badge) |
