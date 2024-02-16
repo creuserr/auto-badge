@@ -42,7 +42,7 @@ class handler(BaseHTTPRequestHandler):
     i = str(i)
     s = ""
     c = 0
-    p = len(i)
+    p = len(i) - 1
     for x in range(len(i)):
       px = p - x
       if c == 2:
