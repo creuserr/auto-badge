@@ -39,15 +39,16 @@ class handler(BaseHTTPRequestHandler):
     self.end_headers()
     
   def format_count(i):
+    i = str(i)
     s = ""
     c = 0
-    for i in range(str(i)):
+    for x in range(i):
       if c == 3:
         c = 0
-        s = str(i)[i] + s + ","
+        s = f"{i[x]}{s},'
       else:
         c += 1
-        s = str(i)[i] + s
+        s = f'{i[x]s
     return s
 
 print(handler.format_count(8273))
