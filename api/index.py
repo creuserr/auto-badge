@@ -42,10 +42,10 @@ class handler(BaseHTTPRequestHandler):
     i = str(i)
     s = ""
     c = 0
-    for x in range(i):
+    for x in range(len(i)):
       if c == 3:
         c = 0
-        s = f"{i[x]}{s},'
+        s = f'{i[x]}{s},'
       else:
         c += 1
         s = f'{i[x]}{s}'
