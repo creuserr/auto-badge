@@ -42,7 +42,9 @@ class handler(BaseHTTPRequestHandler):
     s = ""
     c = 0
     for i in range(str(i)):
-      if i == 3:
-        
+      if c == 3:
+        c = 0
+        s = str(i)[i] + s
       else:
-        
+        c += 1
+        s = str(i)[i]
