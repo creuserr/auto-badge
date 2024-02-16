@@ -48,7 +48,7 @@ class handler(BaseHTTPRequestHandler):
         s = f"{i[x]}{s},'
       else:
         c += 1
-        s = f'{i[x]s
+        s = f'{i[x]}{s}''
     return s
 
 print(handler.format_count(8273))
