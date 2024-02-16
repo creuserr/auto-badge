@@ -44,6 +44,7 @@ class handler(BaseHTTPRequestHandler):
     c = 0
     p = len(i)
     for x in range(len(i)):
+      x = p - x
       if c == 2:
         c = 0
         s += i[x] + ','
