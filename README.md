@@ -43,7 +43,7 @@ GET https://auto-badge.vercel.app/star/creuserr/auto-badge
 ## Deploy your own
 Auto-badge's main serverless function strictly don't accept heavy queue due to GitHub free API's limitation.
 
-You are free to deploy your own, personalize by your style, and use your own API account. Simply fork this repository and adjust it all you want then deploy it to Vercel.
+You are free to deploy your own, personalize by your style, and use your own API account. Simply fork this repository, adjust it all you want, and deploy it to Vercel.
 
 <div align="center">
 
