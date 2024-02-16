@@ -41,6 +41,7 @@ class handler(BaseHTTPRequestHandler):
   def format_count(i):
     i = str(i)
     if int(i) >= 1000000000:
+      i = i[0:len(i) - 9]
       s = ""
       c = 0
       p = len(i) - 1
@@ -58,4 +59,4 @@ class handler(BaseHTTPRequestHandler):
     elif int(i) >= 1000:
       return i[0:len(i) - 3] + 'k'
 
-print(handler.format_count(8273721))
+print(handler.format_count(12273721276))
