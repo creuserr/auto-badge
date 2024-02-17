@@ -41,8 +41,8 @@ class handler(BaseHTTPRequestHandler):
       if len(path) != 3:
         url += '400 Bad Request-FF5353'
       else:
-        # for diagnosis
-        if 'x-autobadge-diagnosis-dev' in self.path:
+        # for inspection
+        if 'x-autobadge-inspect' in self.path:
           url += f'{quote(str(e))}-FF2D2D'
         else:
           url += '500 Internal Error-FF2D2D'
