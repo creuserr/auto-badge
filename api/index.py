@@ -65,4 +65,4 @@ class handler(BaseHTTPRequestHandler):
     elif i > 1_000:
       return f'{str(i)[:s - 3]}k'
     else:
-      return i
+      return str(i)
