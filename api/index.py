@@ -45,7 +45,7 @@ class handler(BaseHTTPRequestHandler):
         if 'x-autobadge-inspect' in self.path:
           url += f'{quote(str(e))}-FF2D2D'
         else:
-          url += f'500 Internal Error-{quote(self.path)}-FF2D2D'
+          url += f'500 Internal Error-FF2D2D'
     self.send_response(302)
     if count != None:
       self.send_header('X-Autobadge-Version', version)
