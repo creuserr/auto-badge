@@ -61,8 +61,8 @@ class handler(BaseHTTPRequestHandler):
     if i > 1_000_000_000:
       return f'{i:,}'[:s - 9] + 'b'
     elif i > 1_000_000:
-      return f'{i:,}'[:s - 6] + 'm'
+      return f'{str(i)[:s - 6]}m'
     elif i > 1_000:
-      return f'{i:,}'[:s - 3] + 'k'
+      return f'{str(i)[:s - 3]}k'
     else:
       return i
