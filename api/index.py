@@ -36,11 +36,14 @@ class handler(BaseHTTPRequestHandler):
           url += f'Open Issues-{self.fmtcount(count)}-008A3D'
         else:
           url += '400 Bad Request-Invalid method-FF5353'
-    except:
+    except BaseException as e:
       if len(path) != 3:
         url += '400 Bad Request-FF5353'
       else:
-        url += '500 Internal Error-FF2D2D'
+        if('x-autobadge-diagnostic' self.path):
+          
+        else:
+          url += '500 Internal Error-FF2D2D'
     self.send_response(302)
     if count != None:
       self.send_header('X-Autobadge-Version', version)
