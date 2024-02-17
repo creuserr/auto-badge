@@ -1,4 +1,5 @@
 from http.server import BaseHTTPRequestHandler
+from urllib.parse import quote
 import requests
 import json
 
@@ -40,8 +41,9 @@ class handler(BaseHTTPRequestHandler):
       if len(path) != 3:
         url += '400 Bad Request-FF5353'
       else:
-        if('x-autobadge-diagnostic' self.path):
-          
+        # for diagnosis
+        if 'x-autobadge-diagnosis-dev' in self.path:
+          url += f'{quote(str(e))}-FF2D2D'
         else:
           url += '500 Internal Error-FF2D2D'
     self.send_response(302)
