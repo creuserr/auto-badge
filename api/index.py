@@ -43,7 +43,7 @@ class handler(BaseHTTPRequestHandler):
       else:
         # for inspection
         if 'x-autobadge-inspect' in self.path:
-          url += f'{quote(str(e))}-FF2D2D'
+          url += f'{str(e)}-FF2D2D'
         else:
           url += f'500 Internal Error-FF2D2D'
     self.send_response(302)
@@ -53,7 +53,7 @@ class handler(BaseHTTPRequestHandler):
       self.send_header('X-Autobadge-User', path[1])
       self.send_header('X-Autobadge-Repo', path[2])
       self.send_header('X-Autobadge-Value', count)
-    self.send_header('Location', url)
+    self.send_header('Location', quote(url))
     self.end_headers()
     
   def fmtcount(self, i):
