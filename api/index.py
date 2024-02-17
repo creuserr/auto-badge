@@ -57,22 +57,5 @@ class handler(BaseHTTPRequestHandler):
     self.end_headers()
     
   def fmtcount(self, i):
-    i = str(i)
-    if int(i) >= 1000000000:
-      i = i[0:len(i) - 9]
-      s = ""
-      c = 0
-      p = len(i) - 1
-      for x in range(len(i)):
-        px = p - x
-        if c == 3:
-          c = 1
-          s = i[px] + ',' + s
-        else:
-          c += 1
-          s = i[px] + s
-      return (s[:len(s) - 1] if s.endswith(',') else s) + 'b'
-    elif int(i) >= 1000000:
-      return i[0:len(i) - 6] + 'm'
-    elif int(i) >= 1000:
-      return i[0:len(i) - 3] + 'k'
+    elif i > 1_000:
+      return f'{}'[:len(str(i))]
