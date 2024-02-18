@@ -47,6 +47,7 @@ class handler(BaseHTTPRequestHandler):
         else:
           url += f'500 Internal Error-FF2D2D'
     self.send_response(302)
+    self.send_header('Access-Control-Allow-Origin', '*')
     if count != None:
       self.send_header('X-Autobadge-Version', version)
       self.send_header('X-Autobadge-Method', path[0])
