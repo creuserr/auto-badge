@@ -8,7 +8,7 @@ class handler(BaseHTTPRequestHandler):
     version = 3
     count = None
     url = 'https://img.shields.io/badge/'
-    path = self.path[1:].split('/')
+    path = self.path[1:].split('/')[1:]
     try: 
       req = requests.get('https://creprox.vercel.app/https:/api.github.com/repos/' + '/'.join(path[1:]))
       if 'Not Found' in req.text:
