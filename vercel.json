@@ -5,7 +5,10 @@
     "use": "@vercel/python"
   }],
   "rewrites": [{
-    "source": "/(.*)",
+    "source": "/api/(.*)",
     "destination": "/api/index.py"
+  }, {
+    "source": "/listen/(.*)",
+    "destination": "/api/listen.py"
   }]
 }
