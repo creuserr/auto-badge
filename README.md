@@ -3,33 +3,33 @@ Statically generated Markdown badges for your GitHub repositories' README
 
 <br><div align="center">
 
-![Starazers](https://auto-badge.vercel.app/star/creuserr/auto-badge)
-![Watchers](https://auto-badge.vercel.app/watch/creuserr/auto-badge)
-![Subscribers](https://auto-badge.vercel.app/sub/creuserr/auto-badge)
-![Forks](https://auto-badge.vercel.app/fork/creuserr/auto-badge)
-![Open Issues](https://auto-badge.vercel.app/issue/creuserr/auto-badge)
+![Starazers](https://auto-badge.vercel.app/api/star/creuserr/auto-badge)
+![Watchers](https://auto-badge.vercel.app/api/watch/creuserr/auto-badge)
+![Subscribers](https://auto-badge.vercel.app/api/sub/creuserr/auto-badge)
+![Forks](https://auto-badge.vercel.app/api/fork/creuserr/auto-badge)
+![Open Issues](https://auto-badge.vercel.app/api/issue/creuserr/auto-badge)
 
 </div>
 
 ## Usage
 
 ```html
-https://auto-badge.vercel.app/<METHOD>/<USER>/<REPO>
+https://auto-badge.vercel.app/api/<METHOD>/<USER>/<REPO>
 ```
 
 | Method | For | Example URL |
 |:-----:|:-----:|:-----:|
-| `/star` | Stargazers | [/star/creuserr/auto-badge](https://auto-badge.vercel.app/star/creuserr/auto-badge) |
-| `/watch` | Watchers | [/watch/creuserr/auto-badge](https://auto-badge.vercel.app/watch/creuserr/auto-badge) |
-| `/sub` | Subscribers | [/sub/creuserr/auto-badge](https://auto-badge.vercel.app/sub/creuserr/auto-badge) |
-| `/fork` | Forks | [/fork/creuserr/auto-badge](https://auto-badge.vercel.app/fork/creuserr/auto-badge) |
-| `/issue` | Open Issues | [/issue/creuserr/auto-badge](https://auto-badge.vercel.app/issue/creuserr/auto-badge) |
+| `/star` | Stargazers | [/star/creuserr/auto-badge](https://auto-badge.vercel.app/api/star/creuserr/auto-badge) |
+| `/watch` | Watchers | [/watch/creuserr/auto-badge](https://auto-badge.vercel.app/api/watch/creuserr/auto-badge) |
+| `/sub` | Subscribers | [/sub/creuserr/auto-badge](https://auto-badge.vercel.app/api/sub/creuserr/auto-badge) |
+| `/fork` | Forks | [/fork/creuserr/auto-badge](https://auto-badge.vercel.app/api/fork/creuserr/auto-badge) |
+| `/issue` | Open Issues | [/issue/creuserr/auto-badge](https://auto-badge.vercel.app/api/issue/creuserr/auto-badge) |
 
 ## Additional headers
 Auto-badge apply additional headers when redirecting to **img.shields.io**.
 
 ```http
-GET https://auto-badge.vercel.app/star/creuserr/auto-badge
+GET https://auto-badge.vercel.app/api/star/creuserr/auto-badge
 ```
 
 | Header | For | Example |
