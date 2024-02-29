@@ -11,3 +11,6 @@ class handler(BaseHTTPRequestHandler):
     title = res['title']
     artist = res['artist']
     image = res['image']
+    self.send_response(200)
+    self.send_header('Access-Control-Allow-Origin', '*')
+    self.send_header('Content-Type', 'image/svg')
