@@ -1,3 +1,6 @@
+> [!NOTE]
+> I am no longer maintaining this repository; nevertheless, you can still use it.
+
 # auto-badge
 Statically generated Markdown badges for your GitHub repositories' README
 
